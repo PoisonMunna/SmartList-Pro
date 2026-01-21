@@ -61,12 +61,11 @@ https://poisonmunna.github.io/SmartList-Pro
 
 ### Installation & Setup
 
-```bash
 git clone https://github.com/PoisonMunna/SmartList-Pro.git
 cd SmartList-Pro
-# Just open index.html in your browser!
 
-Project Structure
+
+### Project Structure
 
 SmartList-Pro/
 ├── index.html          # Main page
@@ -75,15 +74,13 @@ SmartList-Pro/
 ├── README.md           # This file
 └── assets/             # Screenshots & images
 
-Developer
-PoisonMunna
+### Developer
+Mayank Raj
 Full Stack Developer | UI/UX Enthusiast | Vanilla JS Lover
 
 GitHub: @PoisonMunna
 Portfolio: https://poisonmunna.github.io
 Open to work & collaborations
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Made with passion, precision, and a lot of coffee
 
