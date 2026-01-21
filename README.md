@@ -67,11 +67,11 @@ cd SmartList-Pro
 
 ### Project Structure
 
-SmartList-Pro/
-├── index.html          # Main page 
-├── style.css           # All styles with dual themes 
-├── script.js           # Core logic + voice + localStorage
-├── README.md           # This file 
+SmartList-Pro/   
+├── index.html          # Main page    
+├── style.css           # All styles with dual themes     
+├── script.js           # Core logic + voice + localStorage    
+├── README.md           # This file   
 └── assets/             # Screenshots & images 
 
 ### Developer
