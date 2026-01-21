@@ -2,7 +2,7 @@
 **The Ultimate Intelligent Grocery Manager**  
 Live Demo → https://poisonmunna.github.io/SmartList-Pro  
 
-![SmartList Pro](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/intro.png)
+![SmartList Pro](Screenshots/intro.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Built with HTML CSS JS](https://img.shields.io/badge/Built_with-HTML_CSS_JS-blue)](https://github.com/PoisonMunna/SmartList-Pro)
@@ -46,10 +46,10 @@ SmartList Pro is a next-generation grocery management web application that combi
 ### Screenshots
 
 **Light Theme (Yellow + Blue)**  
-![Light Theme](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/light.png)
+![Light Theme](Screenshots/light.png)
 
 **Dark Theme (Neon Red Xenon)**  
-![Dark Theme](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/dark.png)
+![Dark Theme](Screenshots/dark.png)
 
 ---
 
