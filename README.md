@@ -2,7 +2,7 @@
 **The Ultimate Intelligent Grocery Manager**  
 Live Demo → https://poisonmunna.github.io/SmartList-Pro  
 
-![SmartList Pro](https://github.com/PoisonMunna/SmartList-Pro/assets/92727679/1e8a2f9c-8d1d-4c5f-9f3e-7a8b9c0d1e2f)
+![SmartList Pro](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/intro.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Built with HTML CSS JS](https://img.shields.io/badge/Built_with-HTML_CSS_JS-blue)](https://github.com/PoisonMunna/SmartList-Pro)
@@ -46,10 +46,10 @@ SmartList Pro is a next-generation grocery management web application that combi
 ### Screenshots
 
 **Light Theme (Yellow + Blue)**  
-![Light Theme](https://github.com/PoisonMunna/SmartList-Pro/assets/92727679/light-screenshot.png)
+![Light Theme](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/light.png)
 
 **Dark Theme (Neon Red Xenon)**  
-![Dark Theme](https://github.com/PoisonMunna/SmartList-Pro/assets/92727679/dark-screenshot.png)
+![Dark Theme](https://github.com/PoisonMunna/SmartList-Pro/Screenshots/dark.png)
 
 ---
 
@@ -68,11 +68,11 @@ cd SmartList-Pro
 ### Project Structure
 
 SmartList-Pro/
-├── index.html          # Main page   <hr>
-├── style.css           # All styles with dual themes <hr>
-├── script.js           # Core logic + voice + localStorage <hr>
-├── README.md           # This file <hr>
-└── assets/             # Screenshots & images <hr>
+├── index.html          # Main page 
+├── style.css           # All styles with dual themes 
+├── script.js           # Core logic + voice + localStorage
+├── README.md           # This file 
+└── assets/             # Screenshots & images 
 
 ### Developer
 Mayank Raj
