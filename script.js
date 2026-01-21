@@ -58,7 +58,10 @@ function renderList(filter = 'all') {
                         ${item.completed ? '<i class="fa-solid fa-check" style="font-size:10px"></i>' : ''}
                     </div>
                     <div class="item-info">
-                        <span class="item-text">${item.text}</span>
+                        <span class="item-text" 
+                              contenteditable="true" 
+                              onkeydown="handleEditKey(event)"
+                              onblur="updateItem(${item.id}, 'text', this.innerText)">${item.text}</span>
                         <div class="item-meta">
                             <span class="tag">${item.category}</span>
                             ${item.priority ? '<span class="priority-flag"><i class="fa-solid fa-star"></i> Priority</span>' : ''}
@@ -68,7 +71,11 @@ function renderList(filter = 'all') {
                 <div class="item-right">
                     <div class="item-qty-price">
                         <div class="item-qty">x${item.qty}</div>
-                        <div class="item-price">₹${(item.price * item.qty).toFixed(2)}</div>
+                        <div class="item-price">
+                            ₹<span contenteditable="true" 
+                                   onkeydown="handleEditKey(event)"
+                                   onblur="updateItem(${item.id}, 'price', this.innerText)">${item.price.toFixed(2)}</span>
+                        </div>
                     </div>
                     <button class="btn-delete" onclick="deleteItem(${item.id})">
                         <i class="fa-regular fa-trash-can"></i>
@@ -79,15 +86,7 @@ function renderList(filter = 'all') {
         });
     }
 
-    const pending = groceryList.filter(i => !i.completed).length;
-    const totalQty = groceryList.reduce((s, i) => s + i.qty, 0);
-    const totalPrice = groceryList.reduce((s, i) => s + (i.price * i.qty), 0).toFixed(2);
-
-    itemCountSpan.innerText = pending;
-    totalQtySpan.innerText = totalQty;
-    totalPriceSpan.innerText = '₹' + totalPrice;
-
-    localStorage.setItem('smartListPro', JSON.stringify(groceryList));
+    updateTotals();
 }
 
 function addItem() {
@@ -174,3 +173,47 @@ themeBtn.onclick = () => {
 };
 
 renderList();
+
+// Function to save edits
+window.updateItem = (id, field, value) => {
+    const item = groceryList.find(i => i.id === id);
+    if (!item) return;
+
+    if (field === 'text') {
+        item.text = value.trim() || "Unnamed Item";
+        item.category = getCategory(item.text); // Re-calculate category if name changes
+    } else if (field === 'price') {
+        // Remove non-numeric characters except decimals
+        const numValue = parseFloat(value.replace(/[^0-9.]/g, '')) || 0;
+        item.price = numValue;
+    }
+
+    // Save to local storage and update totals without full re-render
+    // Full re-render would move the cursor while typing
+    localStorage.setItem('smartListPro', JSON.stringify(groceryList));
+    updateTotals(); 
+    
+    // Optional: Only re-render if text changed to update the Category Tag UI
+    if (field === 'text') renderList(document.querySelector('.tab.active').dataset.filter);
+};
+
+// Prevent Enter key from creating new lines in editable fields
+window.handleEditKey = (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        e.target.blur(); // Trigger the onblur event
+    }
+};
+
+// Separate function for totals to call it independently
+function updateTotals() {
+    const pending = groceryList.filter(i => !i.completed).length;
+    const totalQty = groceryList.reduce((s, i) => s + i.qty, 0);
+    const totalPrice = groceryList.reduce((s, i) => s + (i.price * i.qty), 0).toFixed(2);
+
+    itemCountSpan.innerText = pending;
+    totalQtySpan.innerText = totalQty;
+    totalPriceSpan.innerText = '₹' + totalPrice;
+    
+    localStorage.setItem('smartListPro', JSON.stringify(groceryList));
+}
