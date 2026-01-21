@@ -61,7 +61,8 @@ https://poisonmunna.github.io/SmartList-Pro
 
 ### Installation & Setup
 
-git clone https://github.com/PoisonMunna/SmartList-Pro.git
+git clone   
+https://github.com/PoisonMunna/SmartList-Pro.git  
 cd SmartList-Pro
 
 
@@ -74,12 +75,12 @@ SmartList-Pro/
 ├── README.md           # This file   
 └── assets/             # Screenshots & images 
 
-### Developer
-Mayank Raj
+### Developer  
+Mayank Raj  
 Full Stack Developer | UI/UX Enthusiast | Vanilla JS Lover
 
-GitHub: @PoisonMunna
-Portfolio: https://poisonmunna.github.io
+GitHub: @PoisonMunna  
+Portfolio: https://poisonmunna.github.io  
 Open to work & collaborations
 
 Made with passion, precision, and a lot of coffee
