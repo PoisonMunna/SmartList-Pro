@@ -68,11 +68,11 @@ cd SmartList-Pro
 ### Project Structure
 
 SmartList-Pro/
-├── index.html          # Main page
-├── style.css           # All styles with dual themes
-├── script.js           # Core logic + voice + localStorage
-├── README.md           # This file
-└── assets/             # Screenshots & images
+├── index.html          # Main page   <hr>
+├── style.css           # All styles with dual themes <hr>
+├── script.js           # Core logic + voice + localStorage <hr>
+├── README.md           # This file <hr>
+└── assets/             # Screenshots & images <hr>
 
 ### Developer
 Mayank Raj
